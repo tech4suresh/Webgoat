@@ -34,7 +34,7 @@ public class CryptoUtil {
       throws NoSuchAlgorithmException, InvalidAlgorithmParameterException {
     KeyPairGenerator keyPairGenerator = KeyPairGenerator.getInstance("RSA");
     RSAKeyGenParameterSpec kpgSpec =
-       new RSAKeyGenParameterSpec(
+        new RSAKeyGenParameterSpec(
             2048, FERMAT_PRIMES[new SecureRandom().nextInt(FERMAT_PRIMES.length)]);
     keyPairGenerator.initialize(kpgSpec);
     // keyPairGenerator.initialize(2048);
