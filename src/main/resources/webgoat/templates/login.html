@@ -47,7 +47,21 @@
     </section>
 </section>
     <!-Vulnerabilities->
-
+<form action="">
+      <label for="userInput">Enter your message:</label><br>
+      <input type="text" id="userInput" name="userInput"><br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="output"></div>
+    <script>
+      const outputElement = document.getElementById("output");
+      const formElement = document.querySelector("form");
+      formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const userInput = document.getElementById("userInput").value;
+        outputElement.innerHTML = userInput;
+      });
+    </script>
 
 </body>
 </html>
